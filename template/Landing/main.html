@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- ==== Font Awsome ==== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'landing.css'%}"/>
+    
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: var( --navbar-color) ; color: #fff;" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/" style="color: #fff;margin-left: 4rem;">
+      <img style="width:4.5rem; height: 3rem;" src="{% static 'asset/img/logo4.png' %}" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav nav-links" >
+        <a class="nav-link active" href="/college" style="color: #fff;">Find University</a>
+        <a class="nav-link active" href="/scholarship" style="color: #fff;">Scholarship</a>
+      <a class="nav-link active" href="/aiInterview"style="color: #fff;"> AI Coach</a>
+      <a class="nav-link active" href="/expense"style="color: #fff;">Expense Calculator</a>
+      <a class="nav-link active" href="/studyplanner"style="color: #fff;">Study Planner</a>
+      <a class="nav-link active" href="/visa"style="color: #fff;">Visa Guidance</a>
+      </div>
+    </div>
+    <div style="display: flex; margin-right: 6rem;">
+      {% if user.is_authenticated %}
+        <!-- <a class="nav-link active" href="/logout">Log Out</a> -->
+        <div class="nav-item dropdown-center"> 
+        <a
+          class="nav-link"
+          href="/profile"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="margin-right: 1rem;"
+          
+        >
+                    <i class="fa-solid fa-circle-user fa-xl"  style="color: #fff;"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Give Feedback</a></li>
+          <li><a class="dropdown-item" href="/logout" >Log out</a></li>
+        </ul>
+      </div>
+      {%else%}
+        <a class="nav-link active" href="/login">Log in</a>
+      {%endif%}
+    </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+    <div class="row hero">
+        
+        <div class="col-6 banner">
+            <img class="banner-img" src="https://assets-v2.lottiefiles.com/a/76fc9d7e-1179-11ee-ab92-c36f558da81b/yymIYR0Pqj.gif">
+        </div>
+        <div class="col-6 text-part">
+        {% if user.is_authenticated %}
+        <h1>Welcome {{user.username}}!!<h1>
+        {%endif%}
+        <h1 id="random-text-container" style="font-family: Popins, serif;"></h1>
+        <h3 style="margin-top: 2rem;">Explore abroad universities!</h3>
+
+        <!-- <div class="search"> -->
+            <a href="/college" style="text-decoration: none; width: 100%;">
+    <div class="form-control search-bar" type="search">
+      <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+      <p style="margin:1rem 1.2rem; opacity: 0.7; font-size: medium;">Search Universities..</p>
+    </div>
+  </a>
+        <!-- </div> -->
+        </div>
+    </div>
+
+
+    
+    
+
+
+    <!-- Key Features -->
+    <div class="view">
+        <h1>Key Features</h1>
+        <div class="row">
+            <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/scholarship.png' %}" />
+          <h3>Find University</h3>
+          <p>
+            Discover universities filtered by cities to explore a wide range of options. Make informed decisions about their ideal study destinations.
+
+
+          </p>
+          <br>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/college" class="view-details-btn">Explore more</a>
+        </div>
+            <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/fellowship_15175645.png' %}" />
+          <h3>Scholarship Finder</h3>
+          <p>
+            Our AI-powered scholarship finder helps you maximize the potential of AI to search for available scholarships tailored to your specific needs.
+          </p><br>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/scholarship" class="view-details-btn">Explore more</a>
+        </div>
+            <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/chatbot.png' %}" />
+          <h3>AI Interview</h3>
+          <p>
+            Interact with our AI-powered interview coach in real-time for personalized guidance. Prepare confidently for competitive exams and access tailored study-abroad preparation resources.
+
+          </p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/aiInterview" class="view-details-btn">Explore more</a>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/expense.png' %}" />
+          <h3>Expense Tracker</h3>
+          <p>
+            Easily calculate the estimated costs for tuition, living expenses, and flight fares based on your destination. Plan your budget effectively and streamline your financial preparations for studying abroad.
+
+          </p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/expense" class="view-details-btn">Explore more</a>
+        </div>
+        <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/visa2.png' %}" />
+         <h3>Visa Guidance</h3>
+          <p>
+            Get comprehensive visa assistance with our AI-powered chatbot, guiding you step-by-step through the entire visa process seamlessly.
+
+          </p>
+          <br>
+          
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/visa" class="view-details-btn">Explore more</a>
+        </div>
+        <div class="col-4 block">
+          <img class="feature-img" src="{% static 'asset/img/studyplanner.png' %}" alt="Feature Logo">
+          <h3>Study Planner</h3>
+          <p>
+            Receive a personalized study plan tailored to your needs. Our AI chatbot gathers relevant information and creates a detailed roadmap to help you stay organized and achieve your goals.
+          </p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/studyplanner" class="view-details-btn">Explore more</a>
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col-2">
+                <img style="width:5rem; height: 3rem;" src="{% static 'asset/img/logo4.png' %}" >
+        </div>
+        <div class="col-6 footer-pages">
+          <span>About</span>
+          <span>Contact</span>
+          <span>Privacy</span>
+
+        </div>
+        <div class="col-4 socials" >
+          <span>Follow us</span>
+          <i class="fa-brands fa-instagram fa-xl social-icon" style="color: #fff;"></i>
+          <i class="fa-brands fa-facebook fa-xl  social-icon"></i>
+          <i class="fa-brands fa-x-twitter fa-xl  social-icon"></i>
+          <i class="fa-brands fa-linkedin fa-xl  social-icon"></i>
+        </div>
+
+      </div>
+    </footer>
+
+<script>
+      function displayRandomText() {
+        // Define the array of texts
+        const texts = [
+          "Dream it. Plan it. Achieve it.",
+          "Let's Make Your Study Abroad Dream a Reality.",
+          "Your Next Adventure Begins Here.",
+          "Ready for the World? Start Your Study Abroad Journey with Edu Voyager!"
+        ];
+    
+        // Get a random index from the array
+        const randomIndex = Math.floor(Math.random() * texts.length);
+    
+        // Set the content of the random-text-container to the randomly chosen text
+        document.getElementById('random-text-container').innerText = texts[randomIndex];
+      }
+    
+      // Call the function when the page loads
+      window.onload = displayRandomText;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

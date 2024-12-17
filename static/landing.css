@@ -1,0 +1,392 @@
+
+
+:root {
+  /*=== Colord ===*/
+  --body-color: #CAF0F8; /*#e4e9f7*/
+  --navbar-color: #0077B6;
+  --primary-color: #90E0EF;
+  --primary-color-light: #f6f5ff;
+  --footer-color: #03045E;
+  --text-color: #707070;
+
+  /*=== Transition ===*/
+  /* --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease; */
+}
+
+body {
+   font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+      /* border: 1px solid black; */
+      margin-left: 5rem;
+
+}
+
+.nav-link {
+  font-weight: 500;
+  margin-right: 50px;
+}
+
+.navbar-toggler:hover {
+  transform: scale(1.1); /* Slightly enlarges the toggle button on hover */
+}
+/* Styling for the nav links */
+.nav-link {
+  font-weight: 500;
+  margin-right: 50px;
+  position: relative; /* Required for hover effect */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  color: #007bff; /* Change to desired color on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Styling for the navbar toggler */
+.navbar-toggler {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for toggler button */
+.navbar-toggler:hover {
+  transform: scale(1.1); /* Slightly enlarges the toggle button */
+  background-color: #007bff; /* Change background color on hover */
+}
+
+/* Optional: Focus effect to give more accessibility */
+.nav-link:focus, .navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Adding focus outline */
+}
+
+.hero{
+    display: flex;
+  margin:0 2rem;
+      /* border: 1px solid black; */
+  align-items: center;
+}
+
+.banner-img{
+  height: 45rem;
+  width: 50rem;
+}
+
+.text-part{
+  /* font-family: "Poppins", serif; */
+  font-family: "Montserrat", serif;
+}
+
+
+.view {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+    margin-top: 2rem;
+    font-family: "Open Sans", serif;
+}
+.block {
+  height: 290px;
+  width: 370px;
+  margin: 3rem;
+  background-color: var(--primary-color);
+  justify-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  justify-items: center;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    /* clip-path: inset(100% 100% 0 0); */
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    transform: translateX(0px)
+  }
+}
+
+.block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.search-bar{
+  display: flex;
+  height: 3rem;
+  border: 1px solid rgba(108, 107, 107, 0.3);
+  align-items: center;
+}
+
+.feature-img{
+  width: 5rem;
+  margin-bottom: .5rem;
+}
+
+.searchForm{
+  width: 60%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.searchinput{
+  border: 1px solid rgba(108, 107, 107, 0.3);
+  border-radius: 10px;
+  padding:.6rem 1rem;
+  width: 80%;
+
+}
+
+.searchForm button:hover{
+  color: #fff!important;
+}
+
+
+.showCollege{
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.college-card{
+  width: 100%;
+    /* border: 1px solid black; */
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 6px;
+    background: var(--body-color);
+}
+
+.response{
+  width: 60%;
+  margin: 2rem auto;
+    border: 1px solid black;
+
+}
+.block {
+  text-align: center; /* Center-align text and inline elements (like images) */
+}
+
+.feature-img {
+  display: block;    /* Ensures the image behaves like a block element */
+  margin: 0 auto;    /* Centers horizontally */
+  width: 50px;       /* Adjust the size of the image */
+  height: 50px; 
+}
+
+
+.block h3 {
+  margin-top: 0;
+}
+
+
+.form-div{
+  width: 60%;
+  margin: 2rem auto;
+  /* background: var(--primary-color); */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.studyBtn{
+  color: var(--navbar-color);
+  margin-left: 1rem;
+}
+
+
+.expance-div{
+  width: 50%;
+  margin: 2rem 10rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.expense-result{
+  width: 50%;
+   margin: 2rem 10rem;
+  /* background-color: antiquewhite; */
+  border: 1px dashed black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.input-div{
+  /* border: 1px solid black; */
+  padding: .5rem 1rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-div input{
+  border: 1px solid rgba(108, 107, 107, 0.3);
+  border-radius: 10px;
+  padding:.6rem 1rem;
+  margin-top: .8rem;
+}
+
+.result{
+  /* border: 1px solid black;
+  background-color:#fff ; */
+  width: 58%;
+  margin: 1rem auto;
+  margin-left: 34rem !important;
+  padding: 1rem;
+  font-family: Popins, serif; font-size: 25px;
+}
+
+.chat-form{
+  margin: 2rem 30rem;
+}
+
+.view-details-btn {
+  display: inline-block;
+  padding: 10px 20px ;
+  margin-right: 120px;
+  text-decoration: none;
+  color: #000; /* Text color */
+ /* border: 2px solid #000; /* Border color */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px;
+}
+.view-details-btn:hover {
+  /*background-color: #007bff; /* Change background on hover */
+  color: var(--navbar-color); /* Text color on hover */
+  text-decoration: underline;
+}
+
+.fa-arrow-right{
+  transform: scale(1.5); /* Increases the size by 1.5 times */  
+}
+
+
+.footer{
+  background-color: var(--footer-color);
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-pages{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.socials{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+.social-icon{
+  color: #fff !important;
+
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  margin: 2rem 3rem;
+  flex-direction: row;
+}
+
+.goto-login {
+  display: flex;
+  justify-content: right;
+}
+
+.goto-login a {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.container-right {
+  width: 380px;
+  flex: none;
+  margin-left: 20px;
+}
+
+.white-card {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(99, 182, 142, 0.15);
+  border-radius: 24px;
+  padding: 40px 20px;
+}
+
+.form {
+  padding: 20px 0;
+}
+
+.form-header {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2c6455;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-hint {
+  font-size: 11px;
+  color: #718096;
+  justify-self: center;
+}
+
+.form input,
+.hosted-field {
+  width: 100%;
+  height: 60px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #fff !important;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  color: #718096 !important;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.form-password {
+  position: relative;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90.05deg, #81d4ad 0.05%, #55c992 99.95%);
+  border-radius: 53px;
+  margin: 20px auto;
+  border: none;
+  /* color: #fff; */
+  text-decoration: none;
+}
+

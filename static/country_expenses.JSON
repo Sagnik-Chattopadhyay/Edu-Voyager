@@ -1,0 +1,175 @@
+{
+    "countries": [
+      {
+        "country": "USA",
+        "living_cost": {
+          "monthly_rent": 1500,
+          "groceries": 300,
+          "transportation": 120,
+          "utilities": 200
+        },
+        "travel_expense": 700
+      },
+      {
+        "country": "Australia",
+        "living_cost": {
+          "monthly_rent": 1300,
+          "groceries": 250,
+          "transportation": 100,
+          "utilities": 180
+        },
+        "travel_expense": 500
+      },
+      {
+        "country": "UK",
+        "living_cost": {
+          "monthly_rent": 1200,
+          "groceries": 270,
+          "transportation": 150,
+          "utilities": 200
+        },
+        "travel_expense": 600
+      },
+      {
+        "country": "Singapore",
+        "living_cost": {
+          "monthly_rent": 1500,
+          "groceries": 350,
+          "transportation": 100,
+          "utilities": 250
+        },
+        "travel_expense": 300
+      },
+      {
+        "country": "Japan",
+        "living_cost": {
+          "monthly_rent": 900,
+          "groceries": 200,
+          "transportation": 120,
+          "utilities": 180
+        },
+        "travel_expense": 400
+      },
+      {
+        "country": "Switzerland",
+        "living_cost": {
+          "monthly_rent": 2000,
+          "groceries": 400,
+          "transportation": 150,
+          "utilities": 250
+        },
+        "travel_expense": 800
+      },
+      {
+        "country": "China",
+        "living_cost": {
+          "monthly_rent": 600,
+          "groceries": 150,
+          "transportation": 60,
+          "utilities": 100
+        },
+        "travel_expense": 300
+      },
+      {
+        "country": "Canada",
+        "living_cost": {
+          "monthly_rent": 1400,
+          "groceries": 250,
+          "transportation": 120,
+          "utilities": 200
+        },
+        "travel_expense": 600
+      },
+      {
+        "country": "Sweden",
+        "living_cost": {
+          "monthly_rent": 1300,
+          "groceries": 280,
+          "transportation": 120,
+          "utilities": 200
+        },
+        "travel_expense": 650
+      },
+      {
+        "country": "South Korea",
+        "living_cost": {
+          "monthly_rent": 800,
+          "groceries": 180,
+          "transportation": 80,
+          "utilities": 150
+        },
+        "travel_expense": 400
+      },
+      {
+        "country": "South Africa",
+        "living_cost": {
+          "monthly_rent": 500,
+          "groceries": 120,
+          "transportation": 60,
+          "utilities": 100
+        },
+        "travel_expense": 450
+      },
+      {
+        "country": "France",
+        "living_cost": {
+          "monthly_rent": 1100,
+          "groceries": 250,
+          "transportation": 140,
+          "utilities": 180
+        },
+        "travel_expense": 550
+      },
+      {
+        "country": "Brazil",
+        "living_cost": {
+          "monthly_rent": 600,
+          "groceries": 130,
+          "transportation": 50,
+          "utilities": 90
+        },
+        "travel_expense": 650
+      },
+      {
+        "country": "Russia",
+        "living_cost": {
+          "monthly_rent": 500,
+          "groceries": 100,
+          "transportation": 60,
+          "utilities": 80
+        },
+        "travel_expense": 500
+      },
+      {
+        "country": "Germany",
+        "living_cost": {
+          "monthly_rent": 1200,
+          "groceries": 270,
+          "transportation": 130,
+          "utilities": 200
+        },
+        "travel_expense": 550
+      },
+      {
+        "country": "Denmark",
+        "living_cost": {
+          "monthly_rent": 1400,
+          "groceries": 300,
+          "transportation": 120,
+          "utilities": 250
+        },
+        "travel_expense": 700
+      },
+      {
+        "country": "New Zealand",
+        "living_cost": {
+          "monthly_rent": 1200,
+          "groceries": 250,
+          "transportation": 100,
+          "utilities": 180
+        },
+        "travel_expense": 500
+      }
+    ]
+  }
+  

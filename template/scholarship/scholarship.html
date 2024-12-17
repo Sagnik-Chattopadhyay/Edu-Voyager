@@ -1,0 +1,161 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- ==== Font Awsome ==== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> 
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+      />
+
+    <link rel="stylesheet" href="{%static 'landing.css'%}"/>
+    <style>
+    #OutPut-data {
+      padding: 1rem;
+      border: 1px dashed black;
+      border-radius: 8px;
+      /* background-color: greenyellow; */
+      /* color: #fff; */
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 2rem auto;
+      margin-left: 33rem;
+      width: 58%;
+    }
+  </style>
+ <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'landing.css'%}"/>
+    
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: var( --navbar-color) ; color: #fff;" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/" style="color: #fff;margin-left: 4rem;">
+      <img style="width:4.5rem; height: 3rem;" src="{% static 'asset/img/logo4.png' %}" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav nav-links" >
+        <a class="nav-link active" href="/college" style="color: #fff;">Find University</a>
+        <a class="nav-link active" href="/scholarship" style="color: #fff;">Scholarship</a>
+      <a class="nav-link active" href="/aiInterview"style="color: #fff;"> AI Coach</a>
+      <a class="nav-link active" href="/expense"style="color: #fff;">Expense Calculator</a>
+      <a class="nav-link active" href="/studyplanner"style="color: #fff;">Study Planner</a>
+      <a class="nav-link active" href="/visa"style="color: #fff;">Visa Guidance</a>
+      </div>
+    </div>
+    <div style="display: flex; margin-right: 6rem;">
+      {% if user.is_authenticated %}
+        <!-- <a class="nav-link active" href="/logout">Log Out</a> -->
+        <div class="nav-item dropdown-center"> 
+        <a
+          class="nav-link"
+          href="/profile"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="margin-right: 1rem;"
+          
+        >
+                    <i class="fa-solid fa-circle-user fa-xl"  style="color: #fff;"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Give Feedback</a></li>
+          <li><a class="dropdown-item" href="/logout" >Log out</a></li>
+        </ul>
+      </div>
+      {%else%}
+        <a class="nav-link active" href="/login">Log in</a>
+      {%endif%}
+    </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- <div class="container mt-5"> -->
+    <img src="https://img.freepik.com/premium-vector/books-with-graduation-hat-coins-vector-illustration-scholarship-concept-design_929545-394.jpg" style="position: fixed;  left: -5rem; top: 2rem ;  z-index: -1; width: 38rem; height: 52rem;">
+
+    <h3 style=" width: 25%; margin: 1rem 45rem; margin-bottom: 3rem;">Know about your Scholarship</h3>
+
+        <form id="chat-form" class="searchForm" method="POST" action="{% url 'scholarship' %}" style="margin-left: 32rem;">
+            {% csrf_token %}
+            <textarea class="searchinput" name="user_input" id="user_input" rows="2" class="form-control" placeholder="Enter the name of the university from which you want to study......."></textarea><br>
+            <button type="submit" class="btn btn-outline-primary" style="height: 3rem;"> 
+            <i class="fa-solid fa-paper-plane icon"></i>
+      Send</button>
+        </form>
+
+        <div class="mt-4" id="OutPut-data" >
+            <!-- Dynamic response will appear here -->
+        </div>
+    <!-- </div> -->
+
+
+<script>
+        document.getElementById("chat-form").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+            const userInput = document.getElementById("user_input").value;
+
+            console.log(userInput);
+            
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            console.log(csrfToken);
+
+            try {
+                const response = await fetch("{% url 'scholarship' %}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": csrfToken
+                    },
+                    body: JSON.stringify({ user_input: userInput })
+                });
+
+                if (!response.ok) {
+                    document.getElementById("OutPut-data").innerText = "Error: " + response.statusText;
+                    document.getElementById("OutPut-data").style.display = "block";
+                    return;
+                }
+
+                const data = await response.json();
+                console.log(data.response_text);
+                
+                // Display response_text dynamically
+                document.getElementById("OutPut-data").innerHTML = data.response_text;
+                document.getElementById("OutPut-data").style.display = "block";
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById("OutPut-data").innerText = "An error occurred while fetching data.";
+                document.getElementById("OutPut-data").style.display = "block";
+            }
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
